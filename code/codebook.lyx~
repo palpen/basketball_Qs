@@ -1,0 +1,1401 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+NBA Play-by-Play (2013/14 - 2014/15) Event Type Codebook 
+\end_layout
+
+\begin_layout Section*
+1.
+ Made Shots
+\end_layout
+
+\begin_layout Itemize
+0.
+ No Shot
+\end_layout
+
+\begin_layout Itemize
+1.
+ Jump Shot
+\end_layout
+
+\begin_layout Itemize
+2.
+ Running Jump Shot
+\end_layout
+
+\begin_layout Itemize
+3.
+ Hook Shot
+\end_layout
+
+\begin_layout Itemize
+4.
+ Tip Shot
+\end_layout
+
+\begin_layout Itemize
+5.
+ Layup
+\end_layout
+
+\begin_layout Itemize
+6.
+ Driving Layup
+\end_layout
+
+\begin_layout Itemize
+7.
+ Dunk
+\end_layout
+
+\begin_layout Itemize
+8.
+ Slam Dunk
+\end_layout
+
+\begin_layout Itemize
+9.
+ Driving Dunk
+\end_layout
+
+\begin_layout Itemize
+40.
+ Layup
+\end_layout
+
+\begin_layout Itemize
+41.
+ Running Layup
+\end_layout
+
+\begin_layout Itemize
+42.
+ Driving Layup
+\end_layout
+
+\begin_layout Itemize
+43.
+ Alley Oop Layup
+\end_layout
+
+\begin_layout Itemize
+44.
+ Reverse Layup
+\end_layout
+
+\begin_layout Itemize
+45.
+ Jump Shot
+\end_layout
+
+\begin_layout Itemize
+46.
+ Running Jump Shot
+\end_layout
+
+\begin_layout Itemize
+47.
+ Turnaround Jump Shot
+\end_layout
+
+\begin_layout Itemize
+48.
+ Dunk
+\end_layout
+
+\begin_layout Itemize
+49.
+ Driving Dunk
+\end_layout
+
+\begin_layout Itemize
+50.
+ Running Dunk
+\end_layout
+
+\begin_layout Itemize
+51.
+ Reverse Dunk
+\end_layout
+
+\begin_layout Itemize
+52.
+ Alley Oop Dunk
+\end_layout
+
+\begin_layout Itemize
+53.
+ Tip Shot
+\end_layout
+
+\begin_layout Itemize
+54.
+ Running Tip Shot
+\end_layout
+
+\begin_layout Itemize
+55.
+ Hook Shot
+\end_layout
+
+\begin_layout Itemize
+56.
+ Running Hook Shot
+\end_layout
+
+\begin_layout Itemize
+57.
+ Driving Hook Shot
+\end_layout
+
+\begin_layout Itemize
+58.
+ Turnaround Hook Shot
+\end_layout
+
+\begin_layout Itemize
+59.
+ Finger Roll
+\end_layout
+
+\begin_layout Itemize
+60.
+ Running Finger Roll
+\end_layout
+
+\begin_layout Itemize
+61.
+ Driving Finger Roll
+\end_layout
+
+\begin_layout Itemize
+62.
+ Turnaround Finger Roll
+\end_layout
+
+\begin_layout Itemize
+63.
+ Fadeaway Jumper
+\end_layout
+
+\begin_layout Itemize
+64.Follow Up Dunk
+\end_layout
+
+\begin_layout Itemize
+65.
+ Jump Hook Shot
+\end_layout
+
+\begin_layout Itemize
+66.
+ Jump Bank Shot
+\end_layout
+
+\begin_layout Itemize
+67.
+ Hook Bank Shot
+\end_layout
+
+\begin_layout Itemize
+71.
+ Finger Roll Layup
+\end_layout
+
+\begin_layout Itemize
+72.
+ Putback Layup
+\end_layout
+
+\begin_layout Itemize
+73.
+ Driving Reverse Layup
+\end_layout
+
+\begin_layout Itemize
+74.
+ Running Reverse Layup
+\end_layout
+
+\begin_layout Itemize
+75.
+ Driving Finger Roll Layup
+\end_layout
+
+\begin_layout Itemize
+76.
+ Running Finger Roll Layup
+\end_layout
+
+\begin_layout Itemize
+77.
+ Driving Jump Shot
+\end_layout
+
+\begin_layout Itemize
+78.
+ Floating Jump Shot
+\end_layout
+
+\begin_layout Itemize
+79.
+ Pullup Jump Shot
+\end_layout
+
+\begin_layout Itemize
+80.
+ Step Back Jump Shot
+\end_layout
+
+\begin_layout Itemize
+81.
+ Pullup Bank Shot
+\end_layout
+
+\begin_layout Itemize
+82.
+ Driving Bank Shot
+\end_layout
+
+\begin_layout Itemize
+83.
+ Fadeaway Bank Shot
+\end_layout
+
+\begin_layout Itemize
+84.
+ Running Bank Shot
+\end_layout
+
+\begin_layout Itemize
+85.
+ Turnaround Bank Shot
+\end_layout
+
+\begin_layout Itemize
+86.
+ Turnaround Fadeaway
+\end_layout
+
+\begin_layout Itemize
+87.
+ Putback Dunk
+\end_layout
+
+\begin_layout Itemize
+88.
+ Driving Slam Dunk
+\end_layout
+
+\begin_layout Itemize
+89.
+ Reverse Slam Dunk
+\end_layout
+
+\begin_layout Itemize
+90.
+ Running Slam Dunk
+\end_layout
+
+\begin_layout Itemize
+91.
+ Putback Reverse Dunk
+\end_layout
+
+\begin_layout Itemize
+92.
+ Putback Slam Dunk
+\end_layout
+
+\begin_layout Itemize
+93.
+ Driving Bank Hook Shot
+\end_layout
+
+\begin_layout Itemize
+94.
+ Jump Bank Hook Shot
+\end_layout
+
+\begin_layout Itemize
+95.
+ Running Bank Hook Shot
+\end_layout
+
+\begin_layout Itemize
+96.
+ Turnaround Bank Hook Shot
+\end_layout
+
+\begin_layout Section*
+2.
+ Missed Shots (includes blocks)
+\end_layout
+
+\begin_layout Itemize
+0.
+ No Shot
+\end_layout
+
+\begin_layout Itemize
+1.
+ Jump Shot
+\end_layout
+
+\begin_layout Itemize
+2.
+ Running Jump Shot
+\end_layout
+
+\begin_layout Itemize
+3.
+ Hook Shot
+\end_layout
+
+\begin_layout Itemize
+4.
+ Tip Shot
+\end_layout
+
+\begin_layout Itemize
+5.
+ Layup
+\end_layout
+
+\begin_layout Itemize
+6.
+ Driving Layup
+\end_layout
+
+\begin_layout Itemize
+7.
+ Dunk
+\end_layout
+
+\begin_layout Itemize
+8.
+ Slam Dunk
+\end_layout
+
+\begin_layout Itemize
+9.
+ Driving Dunk
+\end_layout
+
+\begin_layout Itemize
+40.
+ Layup
+\end_layout
+
+\begin_layout Itemize
+41.
+ Running Layup
+\end_layout
+
+\begin_layout Itemize
+42.
+ Driving Layup
+\end_layout
+
+\begin_layout Itemize
+43.
+ Alley Oop Layup
+\end_layout
+
+\begin_layout Itemize
+44.
+ Reverse Layup
+\end_layout
+
+\begin_layout Itemize
+45.
+ Jump Shot
+\end_layout
+
+\begin_layout Itemize
+46.
+ Running Jump Shot
+\end_layout
+
+\begin_layout Itemize
+47.
+ Turnaround Jump Shot
+\end_layout
+
+\begin_layout Itemize
+48.
+ Dunk
+\end_layout
+
+\begin_layout Itemize
+49.
+ Driving Dunk
+\end_layout
+
+\begin_layout Itemize
+50.
+ Running Dunk
+\end_layout
+
+\begin_layout Itemize
+51.
+ Reverse Dunk
+\end_layout
+
+\begin_layout Itemize
+52.
+ Alley Oop Dunk
+\end_layout
+
+\begin_layout Itemize
+53.
+ Tip Shot
+\end_layout
+
+\begin_layout Itemize
+54.
+ Running Tip Shot
+\end_layout
+
+\begin_layout Itemize
+55.
+ Hook Shot
+\end_layout
+
+\begin_layout Itemize
+56.
+ Running Hook Shot
+\end_layout
+
+\begin_layout Itemize
+57.
+ Driving Hook Shot
+\end_layout
+
+\begin_layout Itemize
+58.
+ Turnaround Hook Shot
+\end_layout
+
+\begin_layout Itemize
+59.
+ Finger Roll
+\end_layout
+
+\begin_layout Itemize
+60.
+ Running Finger Roll
+\end_layout
+
+\begin_layout Itemize
+61.
+ Driving Finger Roll
+\end_layout
+
+\begin_layout Itemize
+62.
+ Turnaround Finger Roll
+\end_layout
+
+\begin_layout Itemize
+63.
+ Fadeaway Jumper
+\end_layout
+
+\begin_layout Itemize
+64.Follow Up Dunk
+\end_layout
+
+\begin_layout Itemize
+65.
+ Jump Hook Shot
+\end_layout
+
+\begin_layout Itemize
+66.
+ Jump Bank Shot
+\end_layout
+
+\begin_layout Itemize
+67.
+ Hook Bank Shot
+\end_layout
+
+\begin_layout Itemize
+71.
+ Finger Roll Layup
+\end_layout
+
+\begin_layout Itemize
+72.
+ Putback Layup
+\end_layout
+
+\begin_layout Itemize
+73.
+ Driving Reverse Layup
+\end_layout
+
+\begin_layout Itemize
+74.
+ Running Reverse Layup
+\end_layout
+
+\begin_layout Itemize
+75.
+ Driving Finger Roll Layup
+\end_layout
+
+\begin_layout Itemize
+76.
+ Running Finger Roll Layup
+\end_layout
+
+\begin_layout Itemize
+77.
+ Driving Jump Shot
+\end_layout
+
+\begin_layout Itemize
+78.
+ Floating Jump Shot
+\end_layout
+
+\begin_layout Itemize
+79.
+ Pullup Jump Shot
+\end_layout
+
+\begin_layout Itemize
+80.
+ Step Back Jump Shot
+\end_layout
+
+\begin_layout Itemize
+81.
+ Pullup Bank Shot
+\end_layout
+
+\begin_layout Itemize
+82.
+ Driving Bank Shot
+\end_layout
+
+\begin_layout Itemize
+83.
+ Fadeaway Bank Shot
+\end_layout
+
+\begin_layout Itemize
+84.
+ Running Bank Shot
+\end_layout
+
+\begin_layout Itemize
+85.
+ Turnaround Bank Shot
+\end_layout
+
+\begin_layout Itemize
+86.
+ Turnaround Fadeaway
+\end_layout
+
+\begin_layout Itemize
+87.
+ Putback Dunk
+\end_layout
+
+\begin_layout Itemize
+88.
+ Driving Slam Dunk
+\end_layout
+
+\begin_layout Itemize
+89.
+ Reverse Slam Dunk
+\end_layout
+
+\begin_layout Itemize
+90.
+ Running Slam Dunk
+\end_layout
+
+\begin_layout Itemize
+91.
+ Putback Reverse Dunk
+\end_layout
+
+\begin_layout Itemize
+92.
+ Putback Slam Dunk
+\end_layout
+
+\begin_layout Itemize
+93.
+ Driving Bank Hook Shot
+\end_layout
+
+\begin_layout Itemize
+94.
+ Jump Bank Hook Shot
+\end_layout
+
+\begin_layout Itemize
+95.
+ Running Bank Hook Shot
+\end_layout
+
+\begin_layout Itemize
+96.
+ Turnaround Bank Hook Shot
+\end_layout
+
+\begin_layout Section*
+3.
+ Free Throws (makes and misses)
+\end_layout
+
+\begin_layout Itemize
+10.
+ Free Throw 1 of 1
+\end_layout
+
+\begin_layout Itemize
+11.
+ Free Throw 1 of 2
+\end_layout
+
+\begin_layout Itemize
+12.
+ Free Throw 2 of 2
+\end_layout
+
+\begin_layout Itemize
+13.
+ Free Throw 1 of 3
+\end_layout
+
+\begin_layout Itemize
+14.
+ Free Throw 2 of 3
+\end_layout
+
+\begin_layout Itemize
+15.
+ Free Throw 3 of 3
+\end_layout
+
+\begin_layout Itemize
+16.
+ Free Throw Technical
+\end_layout
+
+\begin_layout Itemize
+17.
+ Free Throw Clear Path
+\end_layout
+
+\begin_layout Itemize
+18.
+ Free Throw Flagrant 1 of 2
+\end_layout
+
+\begin_layout Itemize
+19.
+ Free Throw Flagrant 2 of 2
+\end_layout
+
+\begin_layout Itemize
+20.
+ Free Throw Flagrant 1 of 1
+\end_layout
+
+\begin_layout Itemize
+21.
+ Free Throw Technical 1 of 2 (only one observation)
+\end_layout
+
+\begin_layout Itemize
+23.
+ MISS (only one observation) 1 of 2 (regular free throw)
+\end_layout
+
+\begin_layout Itemize
+24.
+ (blank) (only one observation) 2 of 2 (regular free throw)
+\end_layout
+
+\begin_layout Itemize
+25.
+ Free Throw Clear Path 1 of 2
+\end_layout
+
+\begin_layout Itemize
+26.
+ Free Throw Clear Path 2 of 2
+\end_layout
+
+\begin_layout Section*
+4.
+ Rebounds
+\end_layout
+
+\begin_layout Itemize
+0.
+ Rebound (mostly player rebounds, with some team rebounds) - vast majority
+ of observations
+\end_layout
+
+\begin_layout Itemize
+1.
+ Rebound (team rebounds)
+\end_layout
+
+\begin_layout Itemize
+2.
+ Rebound (team rebounds - fewer observations)
+\end_layout
+
+\begin_layout Itemize
+3.
+ (blank) (few observations)
+\end_layout
+
+\begin_layout Itemize
+4.
+ (blank) (one observation, no player)
+\end_layout
+
+\begin_layout Itemize
+5.
+ (blank) (few observations)
+\end_layout
+
+\begin_layout Itemize
+17.
+ (blank) (few observations)
+\end_layout
+
+\begin_layout Itemize
+20.
+ (blank) (few observations)
+\end_layout
+
+\begin_layout Itemize
+40.
+ (blank) (few observations) - in one case has a player listed
+\end_layout
+
+\begin_layout Itemize
+45.
+ (blank) (few observations)
+\end_layout
+
+\begin_layout Itemize
+53.
+ (blank) (few observations)
+\end_layout
+
+\begin_layout Section*
+5.
+ Turnovers
+\end_layout
+
+\begin_layout Itemize
+0.
+ No Turnover (?)/Steal
+\end_layout
+
+\begin_layout Itemize
+1.
+ Bad Pass/Steal
+\end_layout
+
+\begin_layout Itemize
+2.
+ Lost Ball/Steal
+\end_layout
+
+\begin_layout Itemize
+3.
+ Out of Bounds
+\end_layout
+
+\begin_layout Itemize
+4.
+ Traveling
+\end_layout
+
+\begin_layout Itemize
+5.
+ Foul (Turnover)
+\end_layout
+
+\begin_layout Itemize
+6.
+ Double Dribble
+\end_layout
+
+\begin_layout Itemize
+7.
+ Discontinue Dribble
+\end_layout
+
+\begin_layout Itemize
+8.
+ 3 Second Violation
+\end_layout
+
+\begin_layout Itemize
+9.
+ 5 Second Violation
+\end_layout
+
+\begin_layout Itemize
+10.
+ 8 Second Violation
+\end_layout
+
+\begin_layout Itemize
+11.
+ Shot Clock
+\end_layout
+
+\begin_layout Itemize
+12.
+ Inbound (Turnover)
+\end_layout
+
+\begin_layout Itemize
+13.
+ Backcourt (Turnover)
+\end_layout
+
+\begin_layout Itemize
+14.
+ Illegal Pick (Turnover)
+\end_layout
+
+\begin_layout Itemize
+15.
+ Offensive Goaltending
+\end_layout
+
+\begin_layout Itemize
+16.
+ Isolation Violation (few observations) 
+\end_layout
+
+\begin_layout Itemize
+17.
+ Lane Violation
+\end_layout
+
+\begin_layout Itemize
+18.
+ Jump Ball Violation
+\end_layout
+
+\begin_layout Itemize
+19.
+ Kicked Ball Violation
+\end_layout
+
+\begin_layout Itemize
+20.
+ Illegal Assist
+\end_layout
+
+\begin_layout Itemize
+21.
+ Palming
+\end_layout
+
+\begin_layout Itemize
+22.
+ Post Up (Turnover)
+\end_layout
+
+\begin_layout Itemize
+23.
+ Double Personal
+\end_layout
+
+\begin_layout Itemize
+31.
+ Stolen Pass
+\end_layout
+
+\begin_layout Itemize
+32.
+ Opposite Basket
+\end_layout
+
+\begin_layout Itemize
+33.
+ Punched Ball
+\end_layout
+
+\begin_layout Itemize
+34.
+ Swinging Elbows
+\end_layout
+
+\begin_layout Itemize
+35.
+ Basket from Below
+\end_layout
+
+\begin_layout Itemize
+36.
+ Illegal Screen
+\end_layout
+
+\begin_layout Itemize
+37.
+ Offensive Foul
+\end_layout
+
+\begin_layout Itemize
+38.
+ 5 Second Inbound
+\end_layout
+
+\begin_layout Itemize
+39.
+ Step Out of Bounds
+\end_layout
+
+\begin_layout Itemize
+40.
+ Out of Bounds Lost Ball
+\end_layout
+
+\begin_layout Itemize
+41.
+ Poss Lost Ball (may include steal)
+\end_layout
+
+\begin_layout Itemize
+42.
+ Turnover (1 observation)
+\end_layout
+
+\begin_layout Itemize
+43.
+ Player Out of Bounds Violation
+\end_layout
+
+\begin_layout Itemize
+44.
+ Too Many Players
+\end_layout
+
+\begin_layout Itemize
+52.
+ Turnover (1 observation)
+\end_layout
+
+\begin_layout Section*
+6.
+ Fouls
+\end_layout
+
+\begin_layout Itemize
+1.
+ P.FOUL
+\end_layout
+
+\begin_layout Itemize
+2.
+ S.FOUL
+\end_layout
+
+\begin_layout Itemize
+3.
+ L.B.FOUL
+\end_layout
+
+\begin_layout Itemize
+4.
+ OFF.Foul
+\end_layout
+
+\begin_layout Itemize
+5.
+ IN.FOUL
+\end_layout
+
+\begin_layout Itemize
+6.
+ AWAY.FROM.PLAY.FOUL
+\end_layout
+
+\begin_layout Itemize
+7.
+ ELBOW.FOUL
+\end_layout
+
+\begin_layout Itemize
+8.
+ PUNCH.FOUL
+\end_layout
+
+\begin_layout Itemize
+9.
+ C.P.FOUL
+\end_layout
+
+\begin_layout Itemize
+10.
+ (no description) - includes players on both teams
+\end_layout
+
+\begin_layout Itemize
+11.
+ T.FOUL
+\end_layout
+
+\begin_layout Itemize
+12.
+ Non-Unsportsmanlike
+\end_layout
+
+\begin_layout Itemize
+13.
+ HANGING.TECH.FOUL
+\end_layout
+
+\begin_layout Itemize
+14.
+ FLAGRANT.FOUL.TYPE1
+\end_layout
+
+\begin_layout Itemize
+15.
+ FLAGRANT.FOUL.TYPE2
+\end_layout
+
+\begin_layout Itemize
+16.
+ (no description) - includes players on both teams
+\end_layout
+
+\begin_layout Itemize
+17.
+ T.Foul (Def.
+ 3 Sec)
+\end_layout
+
+\begin_layout Itemize
+18.
+ (team nickname) Foul 
+\end_layout
+
+\begin_layout Itemize
+19.
+ Taunting
+\end_layout
+
+\begin_layout Itemize
+25.
+ Excess Timeout Technical
+\end_layout
+
+\begin_layout Itemize
+26.
+ Offensive Charge Foul
+\end_layout
+
+\begin_layout Itemize
+27.
+ Personal Block Foul
+\end_layout
+
+\begin_layout Itemize
+28.
+ Personal Take Foul
+\end_layout
+
+\begin_layout Itemize
+29.
+ Shooting Block Foul
+\end_layout
+
+\begin_layout Itemize
+30.
+ Too Many Players Tech Foul
+\end_layout
+
+\begin_layout Section*
+7.
+ Violations
+\end_layout
+
+\begin_layout Itemize
+0.
+ Violation: No Violation
+\end_layout
+
+\begin_layout Itemize
+1.
+ Violation: Delay of game Violation
+\end_layout
+
+\begin_layout Itemize
+2.
+ Violation: Defensive Goaltending
+\end_layout
+
+\begin_layout Itemize
+3.
+ Violation: Lane
+\end_layout
+
+\begin_layout Itemize
+4.
+ Violation: Jump Ball
+\end_layout
+
+\begin_layout Itemize
+5.
+ Violation: Kicked Ball
+\end_layout
+
+\begin_layout Itemize
+6.
+ Violation: Double Lane
+\end_layout
+
+\begin_layout Itemize
+18.
+ (no description) (one observation: includes player but no team id)
+\end_layout
+
+\begin_layout Section*
+8.
+ Substitutions
+\end_layout
+
+\begin_layout Itemize
+0.
+ Sub: 
+\end_layout
+
+\begin_layout Itemize
+3.
+ Sub: (one observation)
+\end_layout
+
+\begin_layout Itemize
+10.
+ Sub: (one observation)
+\end_layout
+
+\begin_layout Itemize
+12.
+ Sub: (one observation)
+\end_layout
+
+\begin_layout Itemize
+14.
+ Sub: (one observation)
+\end_layout
+
+\begin_layout Section*
+9.
+ Timeout
+\end_layout
+
+\begin_layout Itemize
+0.
+ Timeout: No Timeout
+\end_layout
+
+\begin_layout Itemize
+1.
+ Timeout: Regular
+\end_layout
+
+\begin_layout Itemize
+2.
+ Timeout: Short
+\end_layout
+
+\begin_layout Itemize
+3.
+ Timeout: Official TV
+\end_layout
+
+\begin_layout Itemize
+4.
+ (no description)
+\end_layout
+
+\begin_layout Itemize
+5.
+ (no description) (1 observation)
+\end_layout
+
+\begin_layout Section*
+10.
+ Jump Ball
+\end_layout
+
+\begin_layout Itemize
+0.
+ Jump Ball
+\end_layout
+
+\begin_layout Section*
+11.
+ Ejection
+\end_layout
+
+\begin_layout Itemize
+0.
+ No Ejection
+\end_layout
+
+\begin_layout Itemize
+1.
+ Second Technical
+\end_layout
+
+\begin_layout Itemize
+2.
+ Second Flagrant Type 1
+\end_layout
+
+\begin_layout Itemize
+3.
+ First Flagrant Type 2
+\end_layout
+
+\begin_layout Itemize
+4.
+ Other
+\end_layout
+
+\begin_layout Itemize
+11.
+ (no description) (one observation)
+\end_layout
+
+\begin_layout Itemize
+15.
+ (no description) (1 observation)
+\end_layout
+
+\begin_layout Section*
+12.
+ Start of Quarter
+\end_layout
+
+\begin_layout Itemize
+0.
+ (no description - includes start of quarter score for quarters 2-end)
+\end_layout
+
+\begin_layout Section*
+13.
+ End of Quarter
+\end_layout
+
+\begin_layout Itemize
+0.
+ (no description - includes end of quarter score)
+\end_layout
+
+\begin_layout Section*
+18.
+ ? (sometimes includes former players)
+\end_layout
+
+\begin_layout Itemize
+0.
+ ?
+\end_layout
+
+\begin_layout Itemize
+1.
+ ?
+\end_layout
+
+\begin_layout Itemize
+2.
+ ?
+\end_layout
+
+\end_body
+\end_document
