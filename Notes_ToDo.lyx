@@ -1,0 +1,548 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Play-by-Play/Lineups Notes and To-Do
+\end_layout
+
+\begin_layout Section
+Construction of Lineups Notes
+\end_layout
+
+\begin_layout Itemize
+Scrape play-by-play data for seasons 1996 - 2014 (regular seasons) using
+ playbyplay.py
+\end_layout
+
+\begin_layout Itemize
+Create codebook (codebook.lyx) for eventmessagetype and eventmessageaction
+ type variables in play-by-play data using 2004 - 2014 (sans 2011) data
+ (merged data using pbpmerge.py)
+\end_layout
+
+\begin_layout Subsection
+Old:
+\end_layout
+
+\begin_layout Enumerate
+Create and fill variables for the home and visitor team id, the segments/stints
+ within a quarter, and the length in seconds of these segments/stints using
+ teamid_seg.py.
+ Because some segments don't start with eventmessagetype==12, use checkseg.py
+ to check if segments start at 1 (see To-Do).
+\end_layout
+
+\begin_layout Enumerate
+Create lineups using lineup.py
+\end_layout
+
+\begin_layout Enumerate
+See above: Check length of lineup through first two steps of lineup.py (using
+ only the p-b-p subs and other observations, but before looking at the box
+ score) using lineuplencheck (and lineup4.py)
+\end_layout
+
+\begin_layout Enumerate
+Use segftfix.py to check and change segment/stint number of free throws to
+ segment that contains the corresponding foul (technical or personal) to
+ credit appropriate lineup with these points.
+\end_layout
+
+\begin_layout Subsection
+New -- re-writing code with functions, and fixing segments to account for
+ elapsed time between subs without other entries in p-b-p:
+\end_layout
+
+\begin_layout Enumerate
+Create and fill variables for the home and visitor team id, the segments/stints
+ within a quarter, and the length in seconds of these segments/stints using
+ pbp_idstint.py.
+ Save data with suffix '_stint'.
+\end_layout
+
+\begin_layout Enumerate
+Check that the home and visitor team ids (from above) are not the same for
+ each game using checkhomevissameid.py.
+\end_layout
+
+\begin_layout Enumerate
+Three-step process of creating lineups using lusubspkl.py, lupbppkl.py and
+ luboxpkl.py.
+ All lineups saved as .pkl, with filename prefix lusubs, lupbp and lubox,
+ respectively.
+\end_layout
+
+\begin_layout Enumerate
+In process of creating lineups, checked for various problems: After pbp
+ step (step 2), files lupbp_badlen.py, lupbp_mult4.py and lupbplen4.py check
+ if lineups within a quarter are of differing lengths or if lineup lengths
+ are greater than 5, if there are games in which two or more quarters have
+ lineup lengths of 4, and if lineups are of length 4 (or less), respectively.
+ Similar to the length checks for stage 2, in stage three (using NBA box
+ scores), files lubox_badlen.py and lubox_len4.py check for lineups of the
+ wrong length (i.e., not of length=5).
+ lubox_checkpt.py checks if playerXgame-level minutes from constructed lineups
+ are equal to those from NBA box scores.
+ As in to-do notes below, my minutes seem to be more accurate (relative
+ to the play-by-play) than NBA box scores.
+\end_layout
+
+\begin_layout Enumerate
+Create and fill variables for the home and visiting team scores, and fill
+ the missing data in the existing 'SCORE' column, using pbp_addscore.py.
+ Save data with suffix '_stsc'.
+\end_layout
+
+\begin_layout Enumerate
+Check if in-quarter scores go in reverse -- here, the pbp is in reverse
+ -- using pbp_checkscore.py.
+ Liste of bad games is saved in pbp_checkscore.txt
+\end_layout
+
+\begin_layout Enumerate
+Prior to checking and moving free throws to the appropriate stint/lineup
+ (since some free throws are made after substitutions that occur after the
+ corresponding foul), check for sequences of technical and shooting fouls
+ where a corrsponding foul occurs after both a foul and sub but before the
+ free throw associated with the original foul.
+ This is done using pbp_checktechftsequence.py, pbp_checkshftsequence.py and
+ pbp_checktechdelaysequence.py.
+ After writing and running the script to move rfee throws to the appropriate
+ stint/lineup, some of these free throws will have to be moved manually
+ based on the lists created by these scripts.
+\end_layout
+
+\begin_layout Enumerate
+Free throws -- both technical and non-technical -- moved to 'correct' stint
+ -- i.e., where the corresponding foul occured -- using pbp_stintftfix.py,
+ with files saved with suffix '_stfix' (some may still need to be corrected).
+ 
+\end_layout
+
+\begin_layout Enumerate
+TeamXQuarter possessions, possession numbers, and points coded using pbp_teampos
+s.py.
+ Files saved with suffix '_perposs'.
+\end_layout
+
+\begin_layout Enumerate
+pbp_checkofffoul.py checks if off foul isn't followed by turnover.
+ This is a precursor to the scripts that will check if there are observations
+ that imply changes in possession within the coded possessions that would
+ affect the total team possessions in a quarter.
+ This script is probably unnecessary, and will be replaced by a more comprehensi
+ve possession change script.
+\end_layout
+
+\begin_layout Enumerate
+Charlotte Hornets team rebounds and turnovers (and possibly other events)
+ changed to correct team id for years 1996 - 2001 using pbp_fixcha9601.py
+ (previously, in 'PLAYER1_ID, team code for New Orleans Hornets was used).
+ Files saved with suffix '_fixcha'.
+\end_layout
+
+\begin_layout Enumerate
+Team possession re-done for years 1996-2001 with fixed Charlotte Hornets
+ team id using pbp_teamposs_fixcha.py.
+ Files saved with suffix '_perposs', as before.
+\end_layout
+
+\begin_layout Enumerate
+CHecked if 'POSS_TEAM' matches either 'HOME_ID' or 'VIS_ID' using pbp_checkteami
+d.py.
+ Saved printed results as pbp_checkteamid.txt.
+\end_layout
+
+\begin_layout Enumerate
+Manually checked each '_perposs' dataset for empty 'PLAYER1_TEAM_ID' columns
+ for made and missed FG, FT, and TO ('EVENTMSGTYPE' in [1,2,3,5].
+ The only cases of empty values have already been caught in pbp_checkteamid.txt
+\end_layout
+
+\begin_layout Enumerate
+Checkedrebounds and offensive foulsto see if neither the PLAYER1_ID nor
+ PLAYER1_TEAM_ID' matches either the 'HOME_ID' or 'VIS_ID' using pbp_checkofffou
+lrebteamid.py.
+ Saved print of details with .txt file.
+\end_layout
+
+\begin_layout Enumerate
+Added correct team ids where they were missing or incorrect from documented
+ pbp_checkofffoulrebteamid.txt and pbp_checkteamid.txt.
+ Re-saved files with '_perposs' suffix.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Checked if there are non-possessing team rebounds or offensive fouls, or
+ non-terminal turnovers using pbp_checkposschange.py.
+ Saved output with corresponding .txt file.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Checked sequences of technicals/delay of games and shooting fouls (if subs
+ and other fouls occured before free throws were shot) using the three ...sequence.t
+xt files.
+ Checked change of possession using pbp_checkposschange.txt.
+ Checked free throw fixes using pbp_checkftfix.txt.
+ Made appropriate changes and saved data as ...ppfix.csv.
+\end_layout
+
+\begin_layout Section
+To-Do
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Re-do segment code to account for substitutions that happen after game time
+ has elapsed but with no other entries in the play-by-play.
+ This necessitates running all stages of the code over again (yuck).
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Check 1996-2003 and 2011 data for more eventmessageactiontype codes (to
+ add to codebook)
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Get 1996-2003 and 2011 data to same point as 2004 - 2014 (sans 2011) - 
+\color green
+Only 11 bad length teamXperiod lineups remain.
+ All other lineups have exactly 5 players!
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Edit teamid_seg so that the first segment is == 1 regardless of whether
+ the quarter's first row has eventmessagetype==12 (as in current code).
+ Fixes problem: some quarters don't start with eventmessagetype==12
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+In some games, play-by-play seems to be reversed (at least the score is).
+ Check for which games the score is decreasing.
+ - 
+\color green
+8 games have play-by-play/score reversed
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Check for sequences: Technical foul, sub, technical foul (incl.
+ delay of game), technical free throw.
+ Or shooting foul, sub, personal foul, other free throw (the latter shouldn't
+ occur).
+ The former should help credit technical free throws to the appropriate
+ lineup -- there may be cases where the technical free throw is being credited
+ to another technical foul after a substitution (unlikely).
+ - 
+\color green
+All checks saved as pbp_check....txt.
+ After moving free throws around via script, will have to manually make
+ adjustments based on these .txt files (lists).
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Check all games to see if constructed lineup minutes line up with box score
+ minutes.
+ - 
+\color green
+Difficult to check; NBA box scores are error-ridden.
+ Saved check files
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Check if there are games for which the home and visitor team ids are the
+ same.
+ - 
+\color green
+All games have different home and vis team ids
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Segments may need to be re-done.
+ Check if there are bunches of substitutions where some occur later than
+ others.
+ That is, there may be substitutions followed by playing time with no observatio
+ns -- ie., dribbled around, out of bounds, without a turnover or shot or
+ foul -- followed by another substitution.
+ This would affect constructed playing time.
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Per problem with uneven lineups (see below): check each quarter fror uneven
+ length lineups
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Per above, check length of other lineups (first stint in each quarter) in
+ same game and team as lineups of bad (<4 or >5) or uneven length.
+ IF there are lineups of length 4 -- i.e., if not all are of length 5 -- using
+ box score to get missing players won't work.
+ Create document of these lengths to go together with the badlength document.
+ - 
+\color green
+All games with bad length periods have 5 man lineups in all other periods!!!
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Create list of teamXgame with multiple periods with 4 player lineups.
+ Also create list of all 4 man lineups to check (note: do both using the
+ lupbp files).
+ - 
+\color green
+All 4 man lineups match up with old checks.
+ There are only 2 games with multiple 4-man lineup periods -- which was
+ the case with the old code (but now with all years checked).
+ Since the regular final lineup code could accomodate these lineups in the
+ old code, it should be easy to re-write it in function form.
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+First cut: Move free throws to correct stint
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+First cut: Get team X quarter possessions and points.
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+In years 1996-2001, for team rebounds and turnovers, 'PLAYER1_ID' and/or
+ 'PLAYER1_TEAM_ID' is (sometimes) miscoded for the Charlotte Hornets.
+ Here, the value these columns take is in line iwth the team id of the New
+ Orleans Hornets.
+ This is due to the team moving at the start of the 2002-03 season.
+ As a result, when finding the team possessions, a problem occurs, where
+ this additional team id is sometimes coded (or a blank value) as the team
+ id.
+ To remedy: First step: Using data with suffix '_stfix' for years 1996-2001,
+ change 'PLAYER1_ID' and 'PLAYER1_TEAM_ID' to 1610612766 (Charlotte Hornets)
+ if equal to 1610612740 (New Orleans Hornets) using pbp_fixcha9601.py.
+ Save files with suffix '_fixcha'.
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Second step for fixing Hornets team ids (see above): Re-run pbp_teamposs.py
+ for fixed 1996-2001 files, save with suffix 
+\begin_inset Quotes eld
+\end_inset
+
+perposs', as before.
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Check if possession team matches either home or visitor team id.
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Change/add team id where wrong or missing (from rebounds or offensive fouls).
+ These errors are documented in pbp_checkofffoulrebteamid.txt (from pbp_checkofff
+oulrebteamid.py).
+ Also, add missing team ids (where the team id does not much the home or
+ vis team id).
+ These errors are documented in pbp_checkteamid.txt (from pbp_checkteamid.py).
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Before getting stint/lineup possessions and points: First step: check if
+ team X quarter possessions are correct.
+ That is, check if there are implied changes of possession within calculated
+ possessions.
+ Perhaps also check end of quarter possessions.
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Before getting stint/ineup possessions and points: Second step: check if
+ moved free throws have been moved to correct stint.
+ If not, correct corrected free throws (i.e., move them to the actual correct
+ stint) manually.
+ Use pbp_..sequence.txt files, and also check STINT_DIFF (abs>1), INDEX_DIFF
+ (abs>6) and Q_DIFF (!=0) variables.
+ Also correct the implied additional possessions from above.
+ Document all checks and changes.
+ - 
+\color green
+1996 data is particularly buggy (1997 also not the greatest, but probably
+ good enough); it shoul dprobably be dropped..
+\end_layout
+
+\begin_layout Itemize
+Go back and check technical free throws from pbp_checktechsequence.txt and
+ corresponding data (ppfix suffix).
+ Free throws should go to the lineup on-court when series of techs started.
+ It appears as though when players are ejected for tecs, the substitution
+ is recorded immediately after the technical foul.
+ The free throws associated with technical fouls after the ejection and
+ sub should still count against the lineup on-court when the techs began.
+ Change this if there are rrors (and save as ppfix).
+ Note: Only need to check 2005-2014 
+\end_layout
+
+\begin_layout Itemize
+Perhaps also create new variable to move technical free throws for at start
+ of quarter for techs that occured at end of previous quarter.
+\end_layout
+
+\begin_layout Itemize
+Check for possessions that are >24 seconds & contain neither rebounds nor
+ fouls (possibly not perfect).
+ 
+\end_layout
+
+\begin_layout Itemize
+Get stint/lineup possessions and points.
+\end_layout
+
+\begin_layout Itemize
+Check each segment for players in the play-by-play who don't show up in
+ the lineup.
+\end_layout
+
+\begin_layout Itemize
+Consider, Adjusted +/- presumably assigns an average effect of a player.
+ It assumes that these effects aren't correlated with the identity of the
+ other players on that player's team.
+ As such, once these stats are calculated, you can plot a histogram (by
+ minutes) of the effect a player has on his lineups.
+ Here, since each player has a linear effect, you look only at the expected
+ +/- (the difference in the average of individual +/- for each team) v.
+ the actual +/-.
+ 
+\end_layout
+
+\begin_layout Section
+Problems with Data
+\end_layout
+
+\begin_layout Itemize
+In 4th quarter of game 1009 in 2001 data, both teams have uneven lineup
+ lengths.
+ There are players who sub off who were already on the previous off-list.
+ There may be a substitution missing
+\end_layout
+
+\begin_layout Itemize
+See above: In 3rd quarter of game 159 in 1997 season, a player subs off
+ in consecutive substitutions/segments.
+\end_layout
+
+\begin_layout Itemize
+Including the two uneven lengthed periods above, there are only 11 periods
+ among the 19 regular season lineups that have lineups of uneven length
+ or of length greater than 5.
+ Not bad.
+\end_layout
+
+\begin_layout Itemize
+In 2008 data, around index 153190, it's very unclear where possessions change.
+ This index number is included in the pbp_checkposschange.txt file.
+ Possessions unchanged from original algorithm for now.
+\end_layout
+
+\end_body
+\end_document
